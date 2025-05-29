@@ -1,0 +1,138 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('to_do_background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.app {
+  max-width: 800px;
+  margin: auto;
+  background: rgb(251, 249, 253);
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  text-align: center;
+  color: #380c60;
+  font-size: 35px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.task-form,
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-form input,
+.task-form select,
+.task-form button,
+.filters select {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.task-form input[type="text"] {
+  flex: 2;
+}
+
+.task-form button {
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ul#taskList {
+  list-style: none;
+  padding: 0;
+}
+
+li.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.task-info {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-info span {
+  margin: 2px 0;
+}
+
+.priority-High {
+  color: red;
+  font-weight: bold;
+}
+
+.priority-Medium {
+  color: orange;
+  font-weight: bold;
+}
+
+.priority-Low {
+  color: green;
+  font-weight: bold;
+}
+
+.done span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task-actions button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.task-actions .edit-btn {
+  background: #ffc107;
+  color: black;
+}
+
+.task-actions .delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.task-actions .done-btn {
+  background: #007bff;
+  color: white;
+}
+
+.task-item[draggable="true"] {
+  cursor: grab;
+}
+
+.task-item.drag-over {
+  border: 2px dashed #aaa;
+}
